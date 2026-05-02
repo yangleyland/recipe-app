@@ -7,7 +7,7 @@ type SiteNavProps = {
 
 export function SiteNav({ activeCategory = "All" }: SiteNavProps) {
   return (
-    <header className="sticky top-0 z-20 border-b border-pink-300/60 bg-[rgba(255,228,240,0.88)] backdrop-blur-xl">
+    <header className="sticky top-0 z-20 border-b border-pink-100 bg-[rgba(255,248,251,0.86)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="font-serif text-3xl font-black tracking-tight text-[var(--berry)]">
@@ -15,7 +15,7 @@ export function SiteNav({ activeCategory = "All" }: SiteNavProps) {
           </Link>
           <Link
             href="/add"
-            className="rounded-full bg-[var(--berry)] px-5 py-3 text-sm font-black uppercase tracking-[0.14em] text-white shadow-lg shadow-pink-900/15 transition hover:-translate-y-0.5 hover:bg-[var(--rose)]"
+            className="rounded-full bg-[var(--berry)] px-5 py-3 text-sm font-black uppercase tracking-[0.14em] text-white shadow-md shadow-rose-900/10 transition hover:-translate-y-0.5 hover:bg-[var(--rose)]"
           >
             Add recipe
           </Link>
@@ -51,7 +51,7 @@ function CategoryLink({
       className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-black uppercase tracking-[0.14em] transition ${
         active
           ? "border-[var(--berry)] bg-[var(--berry)] text-white"
-          : "border-pink-200 bg-white/70 text-pink-900 hover:border-[var(--berry)]"
+          : "border-pink-100 bg-white/60 text-pink-900 hover:border-[var(--berry)]"
       }`}
     >
       {label}

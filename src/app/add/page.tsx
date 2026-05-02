@@ -7,7 +7,7 @@ export default function AddRecipePage() {
       <SiteNav />
       <section className="px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-7 lg:grid-cols-[0.72fr_1.28fr]">
-          <div className="rounded-[2rem] border border-pink-200 bg-[var(--berry)] p-7 text-white shadow-2xl shadow-pink-900/20">
+          <div className="rounded-[2rem] border border-pink-100 bg-[var(--berry)]/90 p-7 text-white shadow-xl shadow-rose-900/10">
             <p className="text-sm font-black uppercase tracking-[0.22em] text-pink-100">
               Add a Recipe
             </p>
