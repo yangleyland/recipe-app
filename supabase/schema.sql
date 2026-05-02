@@ -18,8 +18,11 @@ create policy "Recipes are readable by everyone"
   for select
   using (true);
 
-create policy "Recipes can be inserted by authenticated users"
+drop policy if exists "Recipes can be inserted by authenticated users" on public.recipes;
+drop policy if exists "Recipes can be inserted by everyone" on public.recipes;
+
+create policy "Recipes can be inserted by everyone"
   on public.recipes
   for insert
-  to authenticated
+  to anon, authenticated
   with check (true);
