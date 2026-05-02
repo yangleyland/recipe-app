@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #fff6e7;
-  --ink: #2c2017;
-  --tomato: #d95f2f;
-  --sage: #4a7c59;
-  --butter: #ffd98a;
-  --background: var(--cream);
+  --petal: #fff6fa;
+  --blush: #ffd6e7;
+  --rose: #ff5ca2;
+  --berry: #b51662;
+  --danger: #e5484d;
+  --ink: #351321;
+  --background: var(--petal);
   --foreground: var(--ink);
 }
 

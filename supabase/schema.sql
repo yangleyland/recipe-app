@@ -20,9 +20,16 @@ create policy "Recipes are readable by everyone"
 
 drop policy if exists "Recipes can be inserted by authenticated users" on public.recipes;
 drop policy if exists "Recipes can be inserted by everyone" on public.recipes;
+drop policy if exists "Recipes can be deleted by everyone" on public.recipes;
 
 create policy "Recipes can be inserted by everyone"
   on public.recipes
   for insert
   to anon, authenticated
   with check (true);
+
+create policy "Recipes can be deleted by everyone"
+  on public.recipes
+  for delete
+  to anon, authenticated
+  using (true);

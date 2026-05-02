@@ -154,6 +154,28 @@ export async function getRecipes(): Promise<Recipe[]> {
   return data as Recipe[];
 }
 
+export async function getRecipe(id: string): Promise<Recipe | null> {
+  noStore();
+  const supabase = getSupabase();
+
+  if (!supabase) {
+    return sampleRecipes.find((recipe) => recipe.id === id) ?? null;
+  }
+
+  const { data, error } = await supabase
+    .from("recipes")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    console.error("Unable to load recipe from Supabase:", error.message);
+    return null;
+  }
+
+  return data as Recipe;
+}
+
 export async function addRecipeFromForm(formData: FormData) {
   const recipe: RecipeInput = {
     title: String(formData.get("title") ?? "").trim(),
@@ -174,10 +196,31 @@ export async function addRecipeFromForm(formData: FormData) {
 
   if (!supabase) {
     console.warn("Supabase anon env vars are missing; recipe was not saved.");
+    return null;
+  }
+
+  const { data, error } = await supabase
+    .from("recipes")
+    .insert(recipe)
+    .select("id")
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data.id as string;
+}
+
+export async function deleteRecipe(id: string) {
+  const supabase = getSupabase();
+
+  if (!supabase) {
+    console.warn("Supabase anon env vars are missing; recipe was not deleted.");
     return;
   }
 
-  const { error } = await supabase.from("recipes").insert(recipe);
+  const { error } = await supabase.from("recipes").delete().eq("id", id);
 
   if (error) {
     throw new Error(error.message);
