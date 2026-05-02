@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --petal: #fff6fa;
-  --blush: #ffd6e7;
-  --rose: #ff5ca2;
-  --berry: #b51662;
+  --petal: #ffe4f0;
+  --blush: #ffc6dd;
+  --rose: #f04f98;
+  --berry: #9f1557;
   --danger: #e5484d;
-  --ink: #351321;
+  --cream-card: #fff8fb;
+  --ink: #2d1420;
   --background: var(--petal);
   --foreground: var(--ink);
 }
@@ -19,7 +20,11 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255, 116, 174, 0.28), transparent 28rem),
+    radial-gradient(circle at 85% 4%, rgba(255, 198, 221, 0.72), transparent 32rem),
+    linear-gradient(135deg, #ffe9f3 0%, #ffd7e9 48%, #ffc4de 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-nunito), sans-serif;
 }

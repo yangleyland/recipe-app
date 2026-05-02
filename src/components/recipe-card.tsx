@@ -5,7 +5,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
     <Link
       href={`/recipes/${recipe.id}`}
-      className="group rounded-[2rem] border border-pink-200/80 bg-white/75 p-5 shadow-xl shadow-pink-900/5 transition hover:-translate-y-1 hover:border-[var(--berry)] hover:shadow-2xl hover:shadow-pink-900/10"
+      className="group rounded-[2rem] border border-pink-200/80 bg-[var(--cream-card)]/88 p-5 shadow-xl shadow-pink-900/5 transition hover:-translate-y-1 hover:border-[var(--berry)] hover:bg-white hover:shadow-2xl hover:shadow-pink-900/10"
     >
       <span className="mb-5 flex h-20 w-20 items-center justify-center rounded-[1.5rem] bg-[var(--blush)] text-5xl shadow-inner">
         {recipe.icon}

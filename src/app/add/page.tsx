@@ -3,7 +3,7 @@ import { SiteNav } from "@/components/site-nav";
 
 export default function AddRecipePage() {
   return (
-    <main className="min-h-screen bg-[var(--petal)] text-[var(--ink)]">
+    <main className="min-h-screen text-[var(--ink)]">
       <SiteNav />
       <section className="px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-7 lg:grid-cols-[0.72fr_1.28fr]">

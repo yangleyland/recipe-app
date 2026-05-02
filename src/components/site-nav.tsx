@@ -7,7 +7,7 @@ type SiteNavProps = {
 
 export function SiteNav({ activeCategory = "All" }: SiteNavProps) {
   return (
-    <header className="sticky top-0 z-20 border-b border-pink-200/80 bg-[rgba(255,246,250,0.86)] backdrop-blur-xl">
+    <header className="sticky top-0 z-20 border-b border-pink-300/60 bg-[rgba(255,228,240,0.88)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="font-serif text-3xl font-black tracking-tight text-[var(--berry)]">

@@ -19,7 +19,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-[var(--petal)] text-[var(--ink)]">
+    <main className="min-h-screen text-[var(--ink)]">
       <SiteNav activeCategory={recipe.category} />
       <article className="px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
